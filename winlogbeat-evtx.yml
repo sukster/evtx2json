@@ -1,0 +1,7 @@
+winlogbeat.event_logs:
+  - name: ${EVTX_FILE}
+    no_more_events: stop
+
+output.file:
+  path: "."
+  filename: ${JSON_FILE}
