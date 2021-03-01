@@ -1,5 +1,5 @@
 # evtx2json
-This Powershell script allow you to convert the exported Windows logs in .EVTX format to .JSON file which can be easily ingested by various SIEM products e.g. Azure Sentinel,  Splunk and Elastic.
+This Powershell script allow you to convert the exported Windows logs in .evtx format to .json file which can be easily ingested by various SIEM products e.g. Azure Sentinel,  Splunk and Elastic.
 
 # Prerequisites:
 1. Download the ZIP version of Winlogbeat from https://www.elastic.co/downloads/beats/winlogbeat, extract the winlogbeat.exe from it and add it into the same folder.
@@ -8,7 +8,7 @@ This Powershell script allow you to convert the exported Windows logs in .EVTX f
 # Usage:
 powershell.exe -ExecutionPolicy Bypass .\evtx2json.ps1
 
-# Ingest .json to SIEM:
+# Ingest into SIEM:
 In order to ingest the JSON file into Azure Sentinel, you can use this script from Roberto Rodriguez (@Cyb3rWard0g): https://github.com/Cyb3rWard0g/azure-loganalytics-api-clients/blob/master/powershell/ala-powershell-data-producer.ps1
 
 Example:
