@@ -9,9 +9,11 @@ This Powershell script allow you to convert the exported Windows logs in .evtx f
 powershell.exe -ExecutionPolicy Bypass .\evtx2json.ps1
 
 # Ingest into SIEM:
-In order to ingest the JSON file into Azure Sentinel, you can use this script from Roberto Rodriguez (@Cyb3rWard0g): https://github.com/Cyb3rWard0g/azure-loganalytics-api-clients/blob/master/powershell/ala-powershell-data-producer.ps1
+In order to ingest the .json file into Azure Sentinel, you can use this script from Roberto Rodriguez (@Cyb3rWard0g): https://github.com/Cyb3rWard0g/azure-loganalytics-api-clients/blob/master/powershell/ala-powershell-data-producer.ps1.
 
 Example:
 powershell.exe -ExecutionPolicy Bypass .\ala-powershell-data-producer.ps1 -WorkspaceId xyz123 -WorkspaceSharedKey xyz123 -LogType "test123" -f .\sample.json -v
 
-As for Splunk, you can use the built-in "Add Data" tool in Splunk GUI and upload the .json log file.
+You can also use this tool from Microsoft which should do the same job: https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Sample-Data-Ingest-Tool.
+
+As for Splunk, you can use the built-in "Add Data" tool in Splunk GUI and upload the .json log file there.
